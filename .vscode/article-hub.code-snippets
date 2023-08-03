@@ -1,0 +1,25 @@
+{
+	"Create custom react function component": {
+		"scope": "typescript, typescriptreact",
+		"prefix": "crc",
+		"body": [
+			"import classNames from \"classnames\";",
+			"import cls from \"./${TM_FILENAME_BASE}.module.scss\";",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {",
+			"\tclassName?: string;",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props) => {",
+			"\tconst { className } = props;",
+			"",
+			"\treturn (",
+			"\t\t<div className={classNames(cls.${TM_FILENAME_BASE/(^.)/${1:/downcase}/}, className)}>",
+			"\t\t\t$0",
+			"\t\t<\/div>",
+			"\t);",
+			"}",
+		],
+		"description": "Create react component"
+	}
+}
