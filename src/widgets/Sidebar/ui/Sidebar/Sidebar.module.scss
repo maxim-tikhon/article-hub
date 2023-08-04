@@ -15,5 +15,10 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        .lang {
+            margin-left: 20px;
+        }
     }
 }
