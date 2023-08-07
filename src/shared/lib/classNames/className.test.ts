@@ -35,6 +35,6 @@ describe('className', () => {
       'someClass',
       { hovered: true, scrollable: undefined },
       ['class1', 'class2'],
-      )).toBe(expected);
+    )).toBe(expected);
   });
 });
