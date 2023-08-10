@@ -8,5 +8,8 @@
 /build
 /storybook-static
 
+#local
+.env.local
+
 # logs
 build-storybook.log
