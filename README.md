@@ -13,3 +13,4 @@ React project with full configuration from scratch:
 - i18n
 - routing
 - FCD architecture
+- Github Actions CI

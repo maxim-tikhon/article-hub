@@ -4,8 +4,9 @@
 # testing
 /coverage
 
-# production
+# builds
 /build
+/storybook-static
 
 # logs
 build-storybook.log

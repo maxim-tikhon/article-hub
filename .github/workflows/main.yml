@@ -14,12 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+      with:
+        fetch-depth: 0
+    - name: se Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: install modules
+    - name: install dependencies
       run: npm install
     - name: build project
       run: npm run build:prod
@@ -28,4 +30,8 @@ jobs:
     - name: run stylelint
       run: npm run stylelint
     - name: run unit tests
-      run: npm run test:unit
+      run: npm run test:unit\
+    - name: publish to Chromatic
+      uses: chromaui/action@v1
+      with:
+        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
