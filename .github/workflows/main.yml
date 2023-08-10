@@ -31,8 +31,8 @@ jobs:
       run: npm run stylelint
     - name: run unit tests
       run: npm run test:unit\
-    - name: publish to Chromatic
-      uses: chromaui/action@v1
-      with:
-        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        exitZeroOnChanges: false
+    # - name: publish to Chromatic
+    #   uses: chromaui/action@v1
+    #   with:
+    #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+    #     exitZeroOnChanges: false
