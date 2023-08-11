@@ -11,19 +11,6 @@ module.exports = {
     'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -32,6 +19,7 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
+    'react-hooks',
   ],
   rules: {
     'react/jsx-filename-extension': [
@@ -50,9 +38,22 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'max-len': [2, { code: 100 }],
+    'max-len': [2, { code: 120 }],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off',
+      },
+    },
+  ],
 };
