@@ -22,5 +22,18 @@
 			"",
 		],
 		"description": "Create react component"
-	}
+	},
+	"Create test": {
+		"scope": "typescript, typescriptreact",
+		"prefix": "ct",
+		"body": [
+			"describe('$TM_FILENAME_BASE', () => {",
+			"\ttest('', () => {",
+			"\t\texpect().toEqual()",
+			"\t});",
+			"});",
+			"",
+		],
+		"description": "Create template test"
+		}
 }

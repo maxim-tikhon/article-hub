@@ -7,5 +7,7 @@
   "Something went wrong": "Что-то пошло не так",
   "Refresh page": "Обновить страницу",
   "Short language": "РУ",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Increment": "Increment",
+  "Decremant": "Decremant"
 }

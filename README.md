@@ -14,3 +14,4 @@ React project with full configuration from scratch:
 - routing
 - FCD architecture
 - Github Actions CI
+- Redux Toolkit

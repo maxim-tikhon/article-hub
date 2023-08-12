@@ -7,5 +7,7 @@
   "Something went wrong": "Something went wrong",
   "Refresh page": "Refresh page",
   "Short language": "EN",
-  "Login": "Login"
+  "Login": "Login",
+  "Increment": "Increment",
+  "Decremant": "Decremant"
 }
