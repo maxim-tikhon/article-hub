@@ -15,3 +15,4 @@ React project with full configuration from scratch:
 - FCD architecture
 - Github Actions CI
 - Redux Toolkit
+- Json server
