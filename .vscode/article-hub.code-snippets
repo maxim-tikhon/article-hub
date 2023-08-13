@@ -4,6 +4,7 @@
 		"prefix": "crc",
 		"body": [
 			"import classNames from 'classnames';",
+			"import { useTranslation } from 'react-i18next';",
 			"import cls from './${TM_FILENAME_BASE}.module.scss';",
 			"",
 			"interface ${TM_FILENAME_BASE}Props {",
@@ -12,6 +13,7 @@
 			"",
 			"export const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props) => {",
 			"\tconst { className } = props;",
+			"\tconst { t } = useTranslation();",
 			"",
 			"\treturn (",
 			"\t\t<div className={classNames(cls.${TM_FILENAME_BASE/(^.)/${1:/downcase}/}, className)}>",
