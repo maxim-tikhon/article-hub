@@ -8,8 +8,11 @@
   "Refresh page": "Обновить страницу",
   "Short language": "РУ",
   "Login": "Войти",
+  "Logout": "Выйти",
   "Increment": "Increment",
   "Decremant": "Decremant",
   "Enter username": "Введите имя пользователя",
-  "Enter password": "Введите пароль"
+  "Enter password": "Введите пароль",
+  "Auth form": "Форма авторизации",
+  "Invalid username or password": "Неверный логин или пароль"
 }

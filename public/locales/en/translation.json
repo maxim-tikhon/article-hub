@@ -8,8 +8,11 @@
   "Refresh page": "Refresh page",
   "Short language": "EN",
   "Login": "Login",
+  "Logout": "Logout",
   "Increment": "Increment",
   "Decremant": "Decremant",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Auth form": "Auth form",
+  "Invalid username or password": "Invalid username or password"
 }
