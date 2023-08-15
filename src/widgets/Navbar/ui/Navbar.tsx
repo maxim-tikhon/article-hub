@@ -28,7 +28,8 @@ export const Navbar = ({ className }: NavbarProps) => {
 
   const logout = useCallback(() => {
     dispatch(userActions.logout());
-  }, [dispatch]);
+    cloesAuthModal();
+  }, [dispatch, cloesAuthModal]);
 
   if (authData) {
     return (

@@ -29,16 +29,6 @@ const LoginForm = memo((props: LoginFormProps) => {
   const isLoading = useSelector(getLoginIsLoading);
   const error = useSelector(getLoginError);
 
-  // const store = useStore() as ReduxStoreWithManager;
-  // useEffect(() => {
-  //   store.reducerManager.add('loginForm', loginReducer);
-
-  //   return () => {
-  //     store.reducerManager.remove('loginForm');
-  //   };
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
   const changeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value));
   }, [dispatch]);
