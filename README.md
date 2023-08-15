@@ -7,6 +7,7 @@ React project with full configuration from scratch:
 - react testing library
 - eslint (Airbnb's config)
 - stylelint
+- husky pre-commit
 - storybook
 - Chromatic (visual tests)
 - theming
@@ -14,6 +15,6 @@ React project with full configuration from scratch:
 - routing
 - FCD architecture
 - Github Actions CI
-- Redux Toolkit, Redux Thunk
 - Json server
-- husky pre-commit
+- Redux Toolkit, Redux Thunk
+- lazy loading, Redux code spliting
