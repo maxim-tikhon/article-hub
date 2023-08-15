@@ -3,6 +3,7 @@ import {
 } from '@reduxjs/toolkit';
 import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { CounterState } from 'entities/Counter';
+import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
 import { LoginState } from 'features/AuthByUserName';
 
@@ -12,6 +13,7 @@ export interface State {
 
   // async reducers
   loginForm?: LoginState;
+  profile?: ProfileState;
 }
 
 export type StateKey = keyof State;

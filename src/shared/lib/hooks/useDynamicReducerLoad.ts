@@ -4,18 +4,28 @@ import { StateKey } from 'app/providers/StoreProvider/config/state';
 import { useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 
-export const useDynamicReducurLoad = (stateKey: StateKey, reducer: Reducer, removeAfterUnmount: boolean = true) => {
+export type ReducersList = {
+  [stateKey in StateKey]?: Reducer;
+}
+
+type ReducersListEntry = [StateKey, Reducer]
+
+export const useDynamicReducurLoad = (reducerList: ReducersList, removeAfterUnmount: boolean = true) => {
   const dispatch = useDispatch();
   const store = useStore() as ReduxStoreWithManager;
 
   useEffect(() => {
-    store.reducerManager.add('loginForm', reducer);
-    dispatch({ type: `@INIT ${stateKey} reducer` });
+    Object.entries(reducerList).forEach(([stateKey, reducer]: ReducersListEntry) => {
+      store.reducerManager.add(stateKey, reducer);
+      dispatch({ type: `@INIT ${stateKey} reducer` });
+    });
 
     return () => {
       if (removeAfterUnmount) {
-        store.reducerManager.remove('loginForm');
-        dispatch({ type: `@DESTROY ${stateKey} reducer` });
+        Object.entries(reducerList).forEach(([stateKey, reducer]: ReducersListEntry) => {
+          store.reducerManager.remove(stateKey);
+          dispatch({ type: `@DESTROY ${stateKey} reducer` });
+        });
       }
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps

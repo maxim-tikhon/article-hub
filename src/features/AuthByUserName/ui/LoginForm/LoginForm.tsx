@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { memo, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { useDynamicReducurLoad } from 'shared/lib/hooks/useDynamicReducerLoad';
+import { ReducersList, useDynamicReducurLoad } from 'shared/lib/hooks/useDynamicReducerLoad';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
@@ -16,14 +17,20 @@ import { getLoginPassword } from '../../model/selectors/getLoginPassword';
 
 interface LoginFormProps {
   className?: string;
+  onSuccess: () => void;
 }
 
-const LoginForm = memo((props: LoginFormProps) => {
-  useDynamicReducurLoad('loginForm', loginReducer);
+const initialReducers: ReducersList = {
+  loginForm: loginReducer,
+};
 
-  const { className } = props;
+const LoginForm = memo((props: LoginFormProps) => {
+  const { className, onSuccess } = props;
+
+  useDynamicReducurLoad(initialReducers);
+
   const { t } = useTranslation();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const username = useSelector(getLoginUsername);
   const password = useSelector(getLoginPassword);
   const isLoading = useSelector(getLoginIsLoading);
@@ -37,10 +44,13 @@ const LoginForm = memo((props: LoginFormProps) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
 
-  const login = useCallback(() => {
-    // @ts-ignore
-    dispatch(loginByUsername({ username, password }));
-  }, [dispatch, password, username]);
+  const login = useCallback(async () => {
+    const result = await dispatch(loginByUsername({ username, password }));
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSuccess();
+    }
+  }, [dispatch, password, username, onSuccess]);
+
   return (
     <div className={classNames(cls.loginForm, className)}>
       <Text title={t('Auth form')} />
