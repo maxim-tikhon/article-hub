@@ -2,6 +2,7 @@ import {
   ReducersMapObject, AnyAction, CombinedState, Reducer,
 } from '@reduxjs/toolkit';
 import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
+import { AxiosInstance } from 'axios';
 import { CounterState } from 'entities/Counter';
 import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
@@ -27,4 +28,13 @@ export interface ReducerManager {
 
 export interface ReduxStoreWithManager extends ToolkitStore<State> {
   reducerManager: ReducerManager;
+}
+
+export interface ThunkExtraArg {
+  api: AxiosInstance;
+}
+
+export interface ThunkConfig<T> {
+  rejectValue: T;
+  extra: ThunkExtraArg;
 }

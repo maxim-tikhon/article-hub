@@ -12,14 +12,15 @@ import 'app/styles/index.scss';
 const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <StoreProvider>
-      <ErrorBoundary fallback={<PageError />}>
-        <BrowserRouter>
+
+    <ErrorBoundary fallback={<PageError />}>
+      <BrowserRouter>
+        <StoreProvider>
           <ThemeProvider>
             <App />
           </ThemeProvider>
-        </BrowserRouter>
-      </ErrorBoundary>
-    </StoreProvider>
+        </StoreProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>,
 );
