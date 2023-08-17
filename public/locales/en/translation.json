@@ -17,5 +17,10 @@
   "Auth form": "Auth form",
   "Invalid username or password": "Invalid username or password",
   "Select currency": "Select currency",
-  "Select country": "Select country"
+  "Select country": "Select country",
+  "Server error": "Серверная ошибка при сохранении",
+  "Incorrect region": "Некорректный регион",
+  "Name and last name are required": "Имя и фамилия обязательны",
+  "Data is not provided": "Данные не указаны",
+  "Incorrect age": "Некорректный возраст"
 }

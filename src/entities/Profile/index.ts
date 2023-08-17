@@ -1,6 +1,7 @@
 export {
   Profile,
   ProfileState,
+  ValidateProfileError,
 } from './model/types/profile';
 
 export {

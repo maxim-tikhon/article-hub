@@ -11,5 +11,11 @@
   "Age": "Age",
   "Username": "Username",
   "Enter username": "Enter username",
-  "Enter avatar link": "Enter avatar link"
+  "Enter avatar link": "Enter avatar link",
+  "Select country": "Select country",
+  "Server error": "Server error",
+  "Incorrect region": "Incorrect region",
+  "Name and last name are required": "Name and last name are required",
+  "Data is not provided": "Data is not provided",
+  "Incorrect age": "Incorrect age"
 }
