@@ -2,5 +2,14 @@
   "Profile": "Profile",
   "Edit": "Edit",
   "Last name": "Last name",
-  "First name": "First name"
+  "First name": "First name",
+  "Upload error": "Upload error",
+  "Try to reload page": "Try to reload page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "City": "City",
+  "Age": "Age",
+  "Username": "Username",
+  "Enter username": "Enter username",
+  "Enter avatar link": "Enter avatar link"
 }
