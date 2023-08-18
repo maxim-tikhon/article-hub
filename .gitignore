@@ -13,3 +13,6 @@
 
 # logs
 build-storybook.log
+
+#templates
+.fttemplates
