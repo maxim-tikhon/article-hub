@@ -2,12 +2,14 @@ import classNames from 'classnames';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
 import { Navbar } from 'widgets/Navbar';
-import { useDispatch } from 'react-redux';
-import { userActions } from 'entities/User';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserInitiated, userActions } from 'entities/User';
 import { AppRouter } from './providers/router';
 
 const App = () => {
   const dispatch = useDispatch();
+  const userInitiated = useSelector(getUserInitiated);
+
   useEffect(() => {
     dispatch(userActions.initAuthData());
   }, [dispatch]);
@@ -18,7 +20,7 @@ const App = () => {
         <Navbar />
         <div className="page-content">
           <Sidebar />
-          <AppRouter />
+          {userInitiated && <AppRouter />}
         </div>
       </Suspense>
     </div>
