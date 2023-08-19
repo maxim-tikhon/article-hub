@@ -16,5 +16,5 @@ React project with full configuration from scratch:
 - FCD architecture
 - Github Actions CI
 - Json server
-- Redux Toolkit, Redux Thunk
+- Redux Toolkit, Redux Thunk, Entity Adapter
 - lazy loading, Redux code spliting

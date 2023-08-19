@@ -1,4 +1,7 @@
 {
   "Article not found": "Article not found",
-  "Upload error": "Upload error"
+  "Upload error": "Upload error",
+  "article-details": {
+    "Comments": "Comments"
+  }
 }

@@ -8,6 +8,7 @@ import { CounterState } from 'entities/Counter';
 import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
 import { LoginState } from 'features/AuthByUserName';
+import { ArticleCommentsState } from 'pages/ArticleDetailsPage';
 
 export interface State {
   counter: CounterState;
@@ -17,6 +18,7 @@ export interface State {
   loginForm?: LoginState;
   profile?: ProfileState;
   articleDetails?: ArticleDetailsState;
+  articleComments?: ArticleCommentsState;
 }
 
 export type StateKey = keyof State;
