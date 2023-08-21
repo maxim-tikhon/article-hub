@@ -16,6 +16,10 @@ body {
     .page-content {
         display: flex;
 
+        .sidebar {
+            flex-shrink: 0;
+        }
+
         .page-wrapper {
             flex-grow: 1;
             padding: 20px 20px 20px 45px;

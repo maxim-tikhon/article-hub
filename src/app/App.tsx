@@ -19,7 +19,7 @@ const App = () => {
       <Suspense fallback="">
         <Navbar />
         <div className="page-content">
-          <Sidebar />
+          <Sidebar className="sidebar" />
           {userInitiated && <AppRouter />}
         </div>
       </Suspense>

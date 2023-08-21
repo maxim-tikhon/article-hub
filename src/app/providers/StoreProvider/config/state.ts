@@ -8,6 +8,7 @@ import { CounterState } from 'entities/Counter';
 import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
 import { LoginState } from 'features/AuthByUserName';
+import { AddCommentFormState } from 'features/addCommentForm';
 import { ArticleCommentsState } from 'pages/ArticleDetailsPage';
 
 export interface State {
@@ -19,6 +20,7 @@ export interface State {
   profile?: ProfileState;
   articleDetails?: ArticleDetailsState;
   articleComments?: ArticleCommentsState;
+  addCommentForm?: AddCommentFormState;
 }
 
 export type StateKey = keyof State;
