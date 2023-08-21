@@ -1,29 +1,34 @@
-/* eslint-disable max-len */
-import classNames from 'classnames';
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
-import { Article, ArticleList } from 'entities/Article';
-import cls from './ArticlesPage.module.scss';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleList } from './ArticleList';
+import { Article, ArticleView } from '../../model/types/article';
 
-interface ArticlesPageProps {
-  className?: string;
-}
+const meta = {
+  title: 'shared/ArticleList',
+  component: ArticleList,
+  tags: ['autodocs'],
+} satisfies Meta<typeof ArticleList>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const article = {
   id: '1',
-  title: 'Javascript news',
+  title: 'Javascript news asfasjf asfjkask f',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
-  type: [
-    'IT',
-  ],
   user: {
     id: '1',
-    username: 'max',
-    avatar: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+    username: 'Ulbi tv',
+    avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
   },
+  type: [
+    'IT',
+    'SCIENCE',
+    'POLITICS',
+    'ECONOMICS',
+  ],
   blocks: [
     {
       id: '1',
@@ -86,15 +91,44 @@ const article = {
   ],
 } as Article;
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation();
-
-  return (
-    <div className={classNames(cls.articlePage, className)}>
-      <ArticleList articles={[article]} isLoading />
-    </div>
-  );
+export const LoadingList: Story = {
+  args: {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.LIST,
+  },
 };
 
-export default memo(ArticlesPage);
+export const LoadingGrid: Story = {
+  args: {
+    articles: [],
+    isLoading: true,
+    view: ArticleView.GRID,
+  },
+};
+
+export const List: Story = {
+  args: {
+    articles: new Array(9)
+      .fill(0)
+      .map((item, index) => ({
+        ...article,
+        id: String(index),
+      })),
+    isLoading: false,
+    view: ArticleView.LIST,
+  },
+};
+
+export const Grid: Story = {
+  args: {
+    articles: new Array(9)
+      .fill(0)
+      .map((item, index) => ({
+        ...article,
+        id: String(index),
+      })),
+    isLoading: false,
+    view: ArticleView.GRID,
+  },
+};
