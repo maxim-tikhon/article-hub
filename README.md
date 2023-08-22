@@ -18,3 +18,4 @@ React project with full configuration from scratch:
 - Json server
 - Redux Toolkit, Redux Thunk, Entity Adapter
 - lazy loading, Redux code spliting
+- Infinite scroll

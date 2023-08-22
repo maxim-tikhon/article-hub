@@ -6,12 +6,14 @@ import { ReducersList, useDynamicReducurLoad } from 'shared/lib/hooks/useDynamic
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
+import { Page } from 'shared/ui/Page/Page';
 import cls from './ArticlesPage.module.scss';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../model/slices/articlePageSlice';
 import { fetchArticlesList } from '../model/services/fetchArticlesList';
 import {
-  getArticlesPageIsLoading, getArticlesPageView, getArticlesPageError,
+  getArticlesPageIsLoading, getArticlesPageView,
 } from '../model/selectors/articlesPageSelectors';
+import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage';
 
 interface ArticlesPageProps {
   className?: string;
@@ -30,19 +32,25 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
-  const error = useSelector(getArticlesPageError);
 
   useInitialEffect(() => {
-    dispatch(fetchArticlesList());
     dispatch(articlesPageActions.initState());
+
+    dispatch(fetchArticlesList({
+      page: 1,
+    }));
   });
+
+  const onLoadNextPart = useCallback(() => {
+    dispatch(fetchNextArticlesPage());
+  }, [dispatch]);
 
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view));
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.articlePage, className)}>
+    <Page className={classNames(cls.articlePage, className)} onScrollEnd={onLoadNextPart}>
       <ArticleViewSelector view={view} onViewClick={onChangeView} />
 
       <ArticleList
@@ -50,7 +58,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         view={view}
         articles={articles}
       />
-    </div>
+    </Page>
   );
 };
 

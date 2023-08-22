@@ -12,6 +12,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleCommentsReducer, getArticleComments } from '../model/slice/articleCommentsSlice';
 import { getArticleCommentsIsLoading } from '../model/selectors/commentsSelectors';
@@ -60,7 +61,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   }
 
   return (
-    <div className={classNames(cls.articleDetailsPage, className)}>
+    <Page className={classNames(cls.articleDetailsPage, className)}>
       <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
         {t('Back to the list')}
       </Button>
@@ -68,7 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <Text className={cls.commentTitle} title={t('Comments')} />
       <AddCommentForm onSendComment={onSendComment} />
       <CommentList comments={comments} isLoading={commentsIsLoading} />
-    </div>
+    </Page>
   );
 };
 
