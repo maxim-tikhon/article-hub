@@ -13,9 +13,15 @@ export const useDynamicReducurLoad = (reducerList: ReducersList, removeAfterUnmo
   const store = useStore() as ReduxStoreWithManager;
 
   useEffect(() => {
+    const mountedReducers = store.reducerManager.getReducerMap();
+
     Object.entries(reducerList).forEach(([stateKey, reducer]) => {
-      store.reducerManager.add(stateKey as StateKey, reducer);
-      dispatch({ type: `@INIT ${stateKey} reducer` });
+      const mounted = mountedReducers[stateKey as StateKey];
+
+      if (!mounted) {
+        store.reducerManager.add(stateKey as StateKey, reducer);
+        dispatch({ type: `@INIT ${stateKey} reducer` });
+      }
     });
 
     return () => {

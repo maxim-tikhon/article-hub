@@ -11,6 +11,7 @@ import cls from './ArticlesPage.module.scss';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../model/slices/articlePageSlice';
 import { fetchArticlesList } from '../model/services/fetchArticlesList';
 import {
+  getArticlesPageInitiated,
   getArticlesPageIsLoading, getArticlesPageView,
 } from '../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage';
@@ -26,19 +27,22 @@ const reducers: ReducersList = {
 const ArticlesPage = (props: ArticlesPageProps) => {
   const { className } = props;
 
-  useDynamicReducurLoad(reducers);
+  useDynamicReducurLoad(reducers, false);
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
+  const initiated = useSelector(getArticlesPageInitiated);
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState());
+    if (!initiated) {
+      dispatch(articlesPageActions.initState());
 
-    dispatch(fetchArticlesList({
-      page: 1,
-    }));
+      dispatch(fetchArticlesList({
+        page: 1,
+      }));
+    }
   });
 
   const onLoadNextPart = useCallback(() => {

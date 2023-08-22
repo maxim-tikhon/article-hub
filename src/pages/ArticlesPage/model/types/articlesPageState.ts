@@ -10,4 +10,5 @@ export interface ArticlesPageState extends EntityState<Article> {
     page: number;
     limit?: number;
     hasMore: boolean;
+    initiated: boolean;
 }
