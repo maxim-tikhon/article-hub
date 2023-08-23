@@ -3,7 +3,7 @@ import { ArticleList } from './ArticleList';
 import { Article, ArticleView } from '../../model/types/article';
 
 const meta = {
-  title: 'shared/ArticleList',
+  title: 'entities/Article/ArticleList',
   component: ArticleList,
   tags: ['autodocs'],
 } satisfies Meta<typeof ArticleList>;

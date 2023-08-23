@@ -4,7 +4,7 @@ import { ArticleDetails } from './ArticleDetails';
 import { Article, ArticleType, ArticleBlockType } from '../../model/types/article';
 
 const meta = {
-  title: 'entities/Article Details',
+  title: 'entities/Article/Article Details',
   component: ArticleDetails,
   tags: ['autodocs'],
   args: {
