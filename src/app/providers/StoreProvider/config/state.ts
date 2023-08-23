@@ -7,14 +7,16 @@ import { ArticleDetailsState } from 'entities/Article';
 import { CounterState } from 'entities/Counter';
 import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
-import { LoginState } from 'features/AuthByUserName';
+import { LoginState } from 'features/authByUserName';
 import { AddCommentFormState } from 'features/addCommentForm';
 import { ArticleCommentsState } from 'pages/ArticleDetailsPage';
 import { ArticlesPageState } from 'pages/ArticlesPage';
+import { ScrollState } from 'features/scrollSave';
 
 export interface State {
   counter: CounterState;
   user: UserState;
+  scroll: ScrollState;
 
   // async reducers
   loginForm?: LoginState;
