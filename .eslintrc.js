@@ -20,6 +20,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'maxtikhon-plugin',
   ],
   rules: {
     'react/jsx-filename-extension': [
@@ -46,6 +47,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'maxtikhon-plugin/path-checker': 2,
   },
   globals: {
     __IS_DEV__: true,
