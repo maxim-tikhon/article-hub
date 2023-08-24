@@ -2,5 +2,8 @@
   "Article not found": "Article not found",
   "Upload error": "Upload error",
   "Comments": "Comments",
-  "Back to the list": "Back to the list"
+  "Back to the list": "Back to the list",
+  "article-details": {
+    "Recommended": "Recommended"
+  }
 }

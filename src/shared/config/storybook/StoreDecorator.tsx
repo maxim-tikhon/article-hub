@@ -4,15 +4,15 @@ import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetai
 import { profileReducer } from 'entities/Profile';
 import { loginReducer } from 'features/authByUserName/model/slice/loginSlice';
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
-import { articleCommentsReducer } from 'pages/ArticleDetailsPage/model/slice/articleCommentsSlice';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlePageSlice';
 import { ReducersList } from 'shared/lib/hooks/useDynamicReducerLoad';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slice';
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
-  articleComments: articleCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
   addCommentForm: addCommentFormReducer,
   articlesPage: articlesPageReducer,
 };

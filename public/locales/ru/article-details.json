@@ -2,5 +2,8 @@
   "Article not found": "Статья не найдена",
   "Upload error": "Произошла ошибка при загрузке статьи.",
   "Comments": "Комментарии",
-  "Back to the list": "Назад к списку"
+  "Back to the list": "Назад к списку",
+  "article-details": {
+    "Recommended": "Рекомендуем"
+  }
 }

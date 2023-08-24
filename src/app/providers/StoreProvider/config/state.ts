@@ -9,7 +9,7 @@ import { ProfileState } from 'entities/Profile';
 import { UserState } from 'entities/User';
 import { LoginState } from 'features/authByUserName';
 import { AddCommentFormState } from 'features/addCommentForm';
-import { ArticleCommentsState } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageState } from 'pages/ArticleDetailsPage';
 import { ArticlesPageState } from 'pages/ArticlesPage';
 import { ScrollState } from 'features/scrollSave';
 
@@ -22,9 +22,9 @@ export interface State {
   loginForm?: LoginState;
   profile?: ProfileState;
   articleDetails?: ArticleDetailsState;
-  articleComments?: ArticleCommentsState;
   addCommentForm?: AddCommentFormState;
   articlesPage?: ArticlesPageState;
+  articleDetailsPage?: ArticleDetailsPageState;
 }
 
 export type StateKey = keyof State;

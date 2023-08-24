@@ -35,5 +35,9 @@
   "IT": "IT",
   "Economics": "Экономика",
   "Science": "Наука",
-  "No articles were found": "Статьи не найдены"
+  "No articles were found": "Статьи не найдены",
+  "Create": "Создание статьи",
+  "Edit": "Редактировать",
+  "Article Hub": "Article Hub",
+  "Create article": "Создать статью"
 }
