@@ -2,7 +2,7 @@ import { StoryFn } from '@storybook/react';
 import { State, StoreProvider } from 'app/providers/StoreProvider';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { profileReducer } from 'entities/Profile';
-import { loginReducer } from 'features/authByUserName/model/slice/loginSlice';
+import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlePageSlice';
 import { ReducersList } from 'shared/lib/hooks/useDynamicReducerLoad';
