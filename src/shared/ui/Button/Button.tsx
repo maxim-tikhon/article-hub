@@ -1,5 +1,7 @@
 import classNames from 'classnames';
-import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
+import {
+  ButtonHTMLAttributes, ForwardedRef, ReactNode, forwardRef, memo,
+} from 'react';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
@@ -26,7 +28,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
 }
 
-export const Button = memo((props: ButtonProps) => {
+export const Button = forwardRef((props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
   const {
     className, children, theme = ButtonTheme.OUTLINE, square, size = ButtonSize.M, disabled, ...otherProps
   } = props;
@@ -42,6 +44,7 @@ export const Button = memo((props: ButtonProps) => {
       className={classNames(cls.button, className, cls[theme], cls[size], mods)}
       disabled={disabled}
       {...otherProps}
+      ref={ref}
     >
       {children}
     </button>

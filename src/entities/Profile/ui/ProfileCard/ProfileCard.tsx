@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import classNames from 'classnames';
 import { Loader } from 'shared/ui/Loader/Loader';
@@ -80,6 +79,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         className={cls.input}
         onChange={onChangeFirstname}
         readOnly={readOnly}
+        data-testid="ProfileCard.firstname"
       />
       <Input
         value={data?.lastname}
@@ -87,6 +87,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         className={cls.input}
         onChange={onChangeLastname}
         readOnly={readOnly}
+        data-testid="ProfileCard.lastname"
       />
       <Input
         value={data?.age}
