@@ -2,4 +2,4 @@ export {
   ArticlesPageAsync as ArticlesPage,
 } from './ui/ArticlesPage.async';
 
-export { ArticlesPageState } from './model/types/articlesPageState';
+export type{ ArticlesPageState } from './model/types/articlesPageState';

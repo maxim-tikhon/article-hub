@@ -1,2 +1,2 @@
 export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCard';
-export { ProfileState } from './model/types/editableProfileCardState';
+export type { ProfileState } from './model/types/editableProfileCardState';
