@@ -40,5 +40,7 @@
   "Edit": "Редактировать",
   "Article Hub": "Article Hub",
   "Create article": "Создать статью",
-  "Upload error": "Ошибка во время загрузки"
+  "Upload error": "Ошибка во время загрузки",
+  "Admin panel": "Панель админа",
+  "You don't have permissions to the page": "Неи дотсупа к странице"
 }
