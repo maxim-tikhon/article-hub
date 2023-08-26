@@ -16,5 +16,8 @@
   "Incorrect region": "Некорректный регион",
   "Name and last name are required": "Имя и фамилия обязательны",
   "Data is not provided": "Данные не указаны",
-  "Incorrect age": "Некорректный возраст"
+  "Incorrect age": "Некорректный возраст",
+  "profile": {
+    "Profile not found": "Профиль не найден"
+  }
 }
