@@ -1,0 +1,20 @@
+{
+  "Age": "Age",
+  "Cancel": "Cancel",
+  "City": "City",
+  "Data is not provided": "Data is not provided",
+  "Edit": "Edit",
+  "Enter avatar link": "Enter avatar link",
+  "First name": "First name",
+  "Incorrect age": "Incorrect age",
+  "Incorrect region": "Incorrect region",
+  "Last name": "Last name",
+  "Name and last name are required": "Name and last name are required",
+  "Profile": "Profile",
+  "Profile not found": "Profile not found",
+  "Save": "Save",
+  "Server error": "Server error",
+  "Try to reload page": "Try to reload page",
+  "Upload error": "Upload error",
+  "Username": "Username"
+}
