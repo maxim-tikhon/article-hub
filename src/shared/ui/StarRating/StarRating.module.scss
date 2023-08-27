@@ -1,0 +1,32 @@
+.starIcon {
+  cursor: pointer;
+  fill: none;
+
+  &:hover,
+  &:has(~ :hover),
+  &.selected {
+    fill: var(--primary-color);
+  }
+}
+
+.filled {
+  .starIcon {
+    cursor: auto;
+
+    &:not(.selected) {
+      fill: none;
+    }
+  }
+}
+
+// .normal {
+//   fill: none;
+// }
+
+// .hovered {
+//   fill: var(--primary-color);
+// }
+
+// .selected {
+//   cursor: auto;
+// }
