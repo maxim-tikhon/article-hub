@@ -1,4 +1,4 @@
-import { State } from 'app/providers/StoreProvider';
+import { State } from '@/app/providers/StoreProvider';
 import { getLoginUsername } from './getLoginUsername';
 
 describe('getLoginUsername', () => {

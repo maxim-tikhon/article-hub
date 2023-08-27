@@ -3,16 +3,16 @@ import {
 } from '@reduxjs/toolkit';
 import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { AxiosInstance } from 'axios';
-import { ArticleDetailsState } from 'entities/Article';
-import { CounterState } from 'entities/Counter';
-import { UserState } from 'entities/User';
-import { LoginState } from 'features/AuthByUserName';
-import { AddCommentFormState } from 'features/addCommentForm';
-import { ArticleDetailsPageState } from 'pages/ArticleDetailsPage';
-import { ArticlesPageState } from 'pages/ArticlesPage';
-import { ScrollState } from 'features/scrollSave';
-import { rtkApi } from 'shared/api/rtkApi';
-import { ProfileState } from 'features/editableProfileCard';
+import { ArticleDetailsState } from '@/entities/Article';
+import { CounterState } from '@/entities/Counter';
+import { UserState } from '@/entities/User';
+import { LoginState } from '@/features/AuthByUserName';
+import { AddCommentFormState } from '@/features/addCommentForm';
+import { ArticleDetailsPageState } from '@/pages/ArticleDetailsPage';
+import { ArticlesPageState } from '@/pages/ArticlesPage';
+import { ScrollState } from '@/features/scrollSave';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { ProfileState } from '@/features/editableProfileCard';
 
 export interface State {
   counter: CounterState;

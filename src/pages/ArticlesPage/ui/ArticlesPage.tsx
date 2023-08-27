@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import { memo, useCallback } from 'react';
-import { ReducersList, useDynamicReducurLoad } from 'shared/lib/hooks/useDynamicReducerLoad';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { Page } from 'widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
+import { ReducersList, useDynamicReducurLoad } from '@/shared/lib/hooks/useDynamicReducerLoad';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { Page } from '@/widgets/Page/Page';
 import cls from './ArticlesPage.module.scss';
 import { articlesPageReducer } from '../model/slices/articlePageSlice';
 import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage';

@@ -19,3 +19,4 @@ React project with full configuration from scratch:
 - Redux Toolkit, Redux Thunk, Entity Adapter, RTK query
 - lazy loading, Redux code spliting, injection of endpoints, lazy libraries import
 - Infinite scroll
+- Babel plugin

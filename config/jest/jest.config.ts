@@ -38,6 +38,8 @@ const config: Config = {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg$': '<rootDir>/config/jest/jestEmptyComponent.tsx',
+    // alias
+    '^@/(.*)$': '<rootDir>src/$1',
   },
   reporters: [
     'default',

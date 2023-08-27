@@ -1,7 +1,7 @@
 import '../../src/app/styles/index.scss';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { RouterDecorator } from 'shared/config/storybook/RouterDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator';
 import { Preview } from '@storybook/react';
 
 const preview: Preview = {

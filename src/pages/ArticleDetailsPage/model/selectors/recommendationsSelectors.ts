@@ -1,4 +1,4 @@
-import { State } from 'app/providers/StoreProvider';
+import { State } from '@/app/providers/StoreProvider';
 
 // eslint-disable-next-line max-len
 export const getArticleRecommendationsIsLoading = (state: State) => state.articleDetailsPage?.recommendations?.isLoading;

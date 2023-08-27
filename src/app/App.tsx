@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
-import { Navbar } from 'widgets/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserInitiated, userActions } from 'entities/User';
+import { Sidebar } from '@/widgets/Sidebar';
+import { Navbar } from '@/widgets/Navbar';
+import { getUserInitiated, userActions } from '@/entities/User';
 import { AppRouter } from './providers/router';
 
 const App = () => {

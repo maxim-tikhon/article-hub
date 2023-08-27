@@ -1,4 +1,4 @@
-import { State } from 'app/providers/StoreProvider';
+import { State } from '@/app/providers/StoreProvider';
 import { getProfileReadonly } from './getProfileReadonly';
 
 describe('getProfileReadonly', () => {
