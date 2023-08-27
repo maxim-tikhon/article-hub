@@ -1,6 +1,6 @@
 # article-hub
 React project with full configuration from scratch:
-- webpack
+- webpack (vite as alternative for development)
 - typescript
 - scss modules
 - jest
