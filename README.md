@@ -17,5 +17,5 @@ React project with full configuration from scratch:
 - Github Actions CI
 - Json server
 - Redux Toolkit, Redux Thunk, Entity Adapter, RTK query
-- lazy loading, Redux code spliting
+- lazy loading, Redux code spliting, injection of endpoints, lazy libraries import
 - Infinite scroll
