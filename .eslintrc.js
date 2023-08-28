@@ -49,6 +49,13 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'maxtikhon-plugin/path-checker': [2, { alias: '@' }],
     'maxtikhon-plugin/public-api-imports': [2, { alias: '@' }],
+    'maxtikhon-plugin/layer-imports': [
+      2,
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
