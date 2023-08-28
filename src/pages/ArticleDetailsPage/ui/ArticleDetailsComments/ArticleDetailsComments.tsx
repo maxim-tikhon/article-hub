@@ -1,5 +1,5 @@
 import { Suspense, memo, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextSize } from '@/shared/ui/Text';

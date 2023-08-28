@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import {
-  ButtonHTMLAttributes, ForwardedRef, ReactNode, forwardRef, memo,
+  ButtonHTMLAttributes, ForwardedRef, ReactNode, forwardRef,
 } from 'react';
 import cls from './Button.module.scss';
 

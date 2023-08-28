@@ -21,6 +21,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'maxtikhon-plugin',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-filename-extension': [
@@ -28,6 +29,7 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
+    'unused-imports/no-unused-imports': 'error',
     'import/prefer-default-export': 'off',
     'arrow-parens': [2, 'as-needed'],
     'react/require-default-props': 'off',

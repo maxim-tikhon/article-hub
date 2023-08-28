@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import {
-  MutableRefObject, ReactNode, useRef, UIEvent, useCallback,
+  MutableRefObject, ReactNode, useRef, UIEvent,
 } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
