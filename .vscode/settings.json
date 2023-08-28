@@ -9,5 +9,8 @@
     ],
     "files.associations": {
         "**/.fttemplates/**": "plaintext",
+    },
+    "search.exclude": {
+        "**/dist": true
     }
 }
