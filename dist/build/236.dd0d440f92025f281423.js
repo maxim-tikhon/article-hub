@@ -1,2 +1,0 @@
-"use strict";
-(self.webpackChunkproduction_project = self.webpackChunkproduction_project || []).push([[236], { 5236: function (e, t, c) { c.r(t), c.d(t, { default: function () { return u; } }); var r = c(5893), a = c(1072), o = c(7294), n = c(2054), s = c(9250), i = c(4184), l = c.n(i); var u = (0, o.memo)((function (e) { var t = e.className, c = (0, a.$G)().t, o = (0, s.UO)().id, i = Boolean(o); return (0, r.jsx)(n.T, { className: l()("lto266Bg", t), children: i ? c("Edit article with ID = ") + o : c("Create") }); })); } }]);
