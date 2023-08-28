@@ -1,8 +1,8 @@
 import '../../src/app/styles/index.scss';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator';
 import { Preview } from '@storybook/react';
+import { Theme } from '@/shared/const/theme';
 
 const preview: Preview = {
   parameters: {
