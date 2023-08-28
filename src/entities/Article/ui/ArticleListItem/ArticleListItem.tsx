@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card } from '@/shared/ui/Card/Card';
-import { Text } from '@/shared/ui/Text/Text';
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Card } from '@/shared/ui/Card';
+import { Text } from '@/shared/ui/Text';
+import { Icon } from '@/shared/ui/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { AppLink } from '@/shared/ui/AppLink';
 import {
   Article, ArticleTextBlock,
 } from '../../model/types/article';
