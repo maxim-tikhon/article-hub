@@ -5,7 +5,7 @@ const ForbiddenPage = () => {
   const { t } = useTranslation();
 
   return (
-    <Page>
+    <Page dataTestId="ForbiddenPage">
       {t('You don\'t have permissions to the page')}
     </Page>
   );
