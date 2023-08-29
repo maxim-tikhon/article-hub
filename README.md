@@ -91,7 +91,7 @@ Scripts for refactoring are located in the *scripts* folder.
 
 The **GitHub Actions** configuration can be found in */.github/workflows*. CI pipeline includes running all types of tests, the project and Storybook builds, running linting.
 
-Husky pre-commit hooks includes runnig linters. The configuration can be found in */.husky*.
+Husky pre-commit hooks includes runnig linters for staged file. The configuration can be found in */.husky*.
 
 ----
 
