@@ -23,7 +23,8 @@
     "postinstall": "ts-node ./scripts/clearCache.ts"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "eslint"
+    "**/*.{ts,tsx}": "eslint",
+    "**/*.scss": "stylelint"
   },
   "keywords": [],
   "author": "",
