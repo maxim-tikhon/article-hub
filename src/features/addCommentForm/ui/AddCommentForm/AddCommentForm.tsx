@@ -43,16 +43,18 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   }, [onCommentTextChange, onSendComment, text]);
 
   return (
-    <HStack justify="between" max className={classNames(cls.addCommentForm, className)}>
+    <HStack justify="between" max className={classNames(cls.addCommentForm, className)} data-testid="AddCommentForm">
       <Input
         className={cls.input}
         placeholder={t('Comment')}
         value={text}
         onChange={onCommentTextChange}
+        data-testid="AddCommentForm.Input"
       />
       <Button
         theme={ButtonTheme.OUTLINE}
         onClick={onSendHandler}
+        data-testid="AddCommentForm.Button"
       >
         {t('Send')}
       </Button>
