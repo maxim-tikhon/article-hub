@@ -37,7 +37,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [dispatch]);
 
   return (
-    <Page className={classNames(cls.articlePage, className)} onScrollEnd={onLoadNextPart}>
+    <Page className={classNames(cls.articlePage, className)} onScrollEnd={onLoadNextPart} dataTestId="ArticlesPage">
       <ArticlesPageFilters />
       <ArticleInfiniteList className={cls.list} />
     </Page>
