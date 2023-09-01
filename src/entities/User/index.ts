@@ -17,4 +17,10 @@ export {
   getUserInitiated,
 } from './model/selectors/getUserInitiated';
 
+export {
+  getUserSettings,
+} from './model/selectors/jsonSettingsSelectors';
+
+export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
 export { isUserAdmin, isUserManager, getUserRoles } from './model/selectors/rolesSelector';

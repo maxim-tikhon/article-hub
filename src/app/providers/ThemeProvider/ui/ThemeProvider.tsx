@@ -1,11 +1,12 @@
 import {
-  FC, ReactNode, useMemo, useState,
+  FC, ReactNode, useEffect, useMemo, useState,
 } from 'react';
-import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage';
+import { useSelector } from 'react-redux';
 import { Theme } from '@/shared/const/theme';
 import { ThemeContext } from '@/shared/lib/context/ThemeContext';
+import { getUserSettings } from '@/entities/User';
 
-const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
+// const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
 interface ThemeProviderProps {
     children: ReactNode;
@@ -14,13 +15,28 @@ interface ThemeProviderProps {
 
 const ThemeProvider: FC<ThemeProviderProps> = props => {
   const { initialTheme, children } = props;
+  const { theme: defaultTheme } = useSelector(getUserSettings);
 
-  const [theme, setTheme] = useState(initialTheme || defaultTheme);
+  const [isThemeInited, setThemeInited] = useState(false);
 
-  const defaultProps = useMemo(() => ({
-    theme,
-    setTheme,
-  }), [theme]);
+  const [theme, setTheme] = useState<Theme>(
+    initialTheme || defaultTheme || Theme.LIGHT,
+  );
+
+  useEffect(() => {
+    if (!isThemeInited && defaultTheme) {
+      setTheme(defaultTheme);
+      setThemeInited(true);
+    }
+  }, [defaultTheme, isThemeInited]);
+
+  const defaultProps = useMemo(
+    () => ({
+      theme,
+      setTheme,
+    }),
+    [theme],
+  );
 
   return (
     <ThemeContext.Provider value={defaultProps}>
