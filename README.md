@@ -107,6 +107,25 @@ There examples of data normalization using **Entity Adapter**.
 
 ----
 
+### Working with Feature Flags
+
+The use of feature flags is allowed only through the toggleFeatures helper.
+It accepts an object with the following options:
+
+```typescript jsx
+{
+   name: // feature flag name, 
+   on: // function to execute if the feature is enabled
+   of: // function to execute if the feature is disabled
+}
+```
+
+For automatic feature removal, use the *remove-feature.ts* script, which takes two arguments:
+- The name of the feature flag to be removed.
+- The state (on/off).
+
+----
+
 ## Other concepts
 - **SCSS modules**
 - **Json server**
