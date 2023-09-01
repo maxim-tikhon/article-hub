@@ -120,7 +120,7 @@ It accepts an object with the following options:
 }
 ```
 
-For automatic feature removal, use the *remove-feature.ts* script, which takes two arguments:
+For automatic feature removal, use the *npm run remove-feature {arg1} {arg2}*, which takes two arguments:
 - The name of the feature flag to be removed.
 - The state (on/off).
 
